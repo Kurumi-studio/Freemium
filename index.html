@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kurumi Studios</title>
     <link rel="stylesheet" href="styles.css">
+    <script>
+    function goToRandomEpisode() {
+        const episodes = ['episode1.html', 'episode2.html', 'episode3.html'];
+        const randomEpisode = episodes[Math.floor(Math.random() * episodes.length)];
+        window.location.href = 'episodes/' + randomEpisode;
+    }
+</script>
+
 </head>
 <body>
 
