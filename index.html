@@ -4,24 +4,114 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kurumi Studios</title>
-    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Inline CSS for styling the page -->
+    <style>
+        /* General reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #222;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            width: 100%;
+        }
+
+        .header-img {
+            width: 100%;
+            height: auto;
+        }
+
+        .top-nav {
+            background-color: #333;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .random-btn {
+            font-size: 18px;
+            padding: 10px 20px;
+            background-color: #ff4500;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .random-btn:hover {
+            background-color: #ff6347;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px;
+        }
+
+        .episodes {
+            flex: 1;
+        }
+
+        .episode {
+            display: flex;
+            background-color: #333;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .episode img {
+            width: 300px;
+            height: 150px;
+        }
+
+        .episode-info {
+            padding: 10px;
+        }
+
+        .episode-info h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: auto;
+        }
+    </style>
+
+    <!-- Inline JavaScript for random episode functionality -->
     <script>
-    function goToRandomEpisode() {
-        const episodes = ['episode1.html', 'episode2.html', 'episode3.html'];
-        const randomEpisode = episodes[Math.floor(Math.random() * episodes.length)];
-        window.location.href = 'episodes/' + randomEpisode;
-    }
-</script>
+        function goToRandomEpisode() {
+            const episodes = ['episode1.html', 'episode2.html', 'episode3.html'];
+            const randomEpisode = episodes[Math.floor(Math.random() * episodes.length)];
+            window.location.href = 'episodes/' + randomEpisode;
+        }
+    </script>
 
 </head>
 <body>
 
     <header>
-        <img src="assets/placeholder.jpg" alt="Header Image" class="header-img">
+        <img src="https://via.placeholder.com/1500x400" alt="Header Image" class="header-img">
     </header>
 
     <nav class="top-nav">
-        <button class="random-btn">Random</button>
+        <button class="random-btn" onclick="goToRandomEpisode()">Random</button>
     </nav>
 
     <div class="container">
@@ -29,7 +119,7 @@
         <section class="episodes">
             <article class="episode">
                 <a href="episodes/episode1.html">
-                    <img src="assets/placeholder.jpg" alt="Episode 1">
+                    <img src="https://via.placeholder.com/300x150" alt="Episode 1">
                     <div class="episode-info">
                         <h2>Episode 1</h2>
                         <p>Placeholder Title</p>
@@ -40,7 +130,7 @@
 
             <article class="episode">
                 <a href="episodes/episode2.html">
-                    <img src="assets/placeholder.jpg" alt="Episode 2">
+                    <img src="https://via.placeholder.com/300x150" alt="Episode 2">
                     <div class="episode-info">
                         <h2>Episode 2</h2>
                         <p>Placeholder Title</p>
@@ -51,7 +141,7 @@
 
             <article class="episode">
                 <a href="episodes/episode3.html">
-                    <img src="assets/placeholder.jpg" alt="Episode 3">
+                    <img src="https://via.placeholder.com/300x150" alt="Episode 3">
                     <div class="episode-info">
                         <h2>Episode 3</h2>
                         <p>Placeholder Title</p>
