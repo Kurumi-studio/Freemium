@@ -15,24 +15,25 @@ header {
 
 h1 {
     margin: 0;
+    font-size: 48px;
 }
 
 main {
     margin: 20px;
 }
 
-.video-list {
+ul.video-list {
     list-style-type: none;
     padding: 0;
 }
 
-.video-list li {
+ul.video-list li {
     margin: 10px 0;
 }
 
-.video-list a {
+ul.video-list a {
     text-decoration: none;
-    font-size: 18px;
+    font-size: 20px;
     color: #333;
     background-color: #f8f8f8;
     padding: 10px;
@@ -41,7 +42,7 @@ main {
     transition: 0.3s;
 }
 
-.video-list a:hover {
+ul.video-list a:hover {
     background-color: #ddd;
     border-color: #333;
 }
