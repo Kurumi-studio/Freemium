@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kurumi Studios</title>
+    <title>Kurumi Studios - Anime Series</title>
     
     <!-- Inline CSS for styling the page -->
     <style>
@@ -59,11 +59,11 @@
             margin: 20px;
         }
 
-        .episodes {
+        .series-list {
             flex: 1;
         }
 
-        .episode {
+        .series {
             display: flex;
             background-color: #333;
             margin-bottom: 20px;
@@ -71,16 +71,16 @@
             overflow: hidden;
         }
 
-        .episode img {
+        .series img {
             width: 300px;
             height: 150px;
         }
 
-        .episode-info {
+        .series-info {
             padding: 10px;
         }
 
-        .episode-info h2 {
+        .series-info h2 {
             font-size: 24px;
             margin-bottom: 10px;
         }
@@ -94,15 +94,6 @@
         }
     </style>
 
-    <!-- Inline JavaScript for random episode functionality -->
-    <script>
-        function goToRandomEpisode() {
-            const episodes = ['episode1.html', 'episode2.html', 'episode3.html'];
-            const randomEpisode = episodes[Math.floor(Math.random() * episodes.length)];
-            window.location.href = 'episodes/' + randomEpisode;
-        }
-    </script>
-
 </head>
 <body>
 
@@ -111,41 +102,28 @@
     </header>
 
     <nav class="top-nav">
-        <button class="random-btn" onclick="goToRandomEpisode()">Random</button>
+        <button class="random-btn">Random</button>
     </nav>
 
     <div class="container">
-        <!-- Left Section: Episodes -->
-        <section class="episodes">
-            <article class="episode">
-                <a href="episodes/episode1.html">
-                    <img src="https://via.placeholder.com/300x150" alt="Episode 1">
-                    <div class="episode-info">
-                        <h2>Episode 1</h2>
-                        <p>Placeholder Title</p>
+        <!-- Left Section: Series -->
+        <section class="series-list">
+            <article class="series">
+                <a href="anime-series/series1/index.html">
+                    <img src="https://via.placeholder.com/300x150" alt="Series 1">
+                    <div class="series-info">
+                        <h2>Series 1</h2>
                         <p>Magic, Adventure, Comedy</p>
                     </div>
                 </a>
             </article>
 
-            <article class="episode">
-                <a href="episodes/episode2.html">
-                    <img src="https://via.placeholder.com/300x150" alt="Episode 2">
-                    <div class="episode-info">
-                        <h2>Episode 2</h2>
-                        <p>Placeholder Title</p>
+            <article class="series">
+                <a href="anime-series/series2/index.html">
+                    <img src="https://via.placeholder.com/300x150" alt="Series 2">
+                    <div class="series-info">
+                        <h2>Series 2</h2>
                         <p>Action, Fantasy, Romance</p>
-                    </div>
-                </a>
-            </article>
-
-            <article class="episode">
-                <a href="episodes/episode3.html">
-                    <img src="https://via.placeholder.com/300x150" alt="Episode 3">
-                    <div class="episode-info">
-                        <h2>Episode 3</h2>
-                        <p>Placeholder Title</p>
-                        <p>Slice of Life, Comedy</p>
                     </div>
                 </a>
             </article>
