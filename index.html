@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kurumi Studios - Anime Series</title>
-    
+
     <!-- Inline CSS for styling the page -->
     <style>
         /* General reset */
@@ -94,6 +94,22 @@
         }
     </style>
 
+    <!-- Inline JavaScript for random episode functionality -->
+    <script>
+        function goToRandomEpisode() {
+            // List of all episode URLs for different series
+            const episodes = [
+                'anime-series/series1/episode1.html',
+                'anime-series/series1/episode2.html',
+                'anime-series/series2/episode1.html',
+                'anime-series/series2/episode2.html'
+            ];
+            // Select a random episode from the list
+            const randomEpisode = episodes[Math.floor(Math.random() * episodes.length)];
+            // Redirect the user to the random episode
+            window.location.href = randomEpisode;
+        }
+    </script>
 </head>
 <body>
 
@@ -102,7 +118,8 @@
     </header>
 
     <nav class="top-nav">
-        <button class="random-btn">Random</button>
+        <!-- The Random button that calls the goToRandomEpisode() function when clicked -->
+        <button class="random-btn" onclick="goToRandomEpisode()">Random</button>
     </nav>
 
     <div class="container">
