@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Episode 1 - The Vexations of a Shut-In Vampire Princess</title>
+    <title>My GitHub Page with Dropbox Video</title>
     
     <style>
         body {
@@ -17,12 +17,13 @@
             position: relative;
             padding-bottom: 56.25%; /* 16:9 aspect ratio */
             height: 0;
+            width: 100%;
+            max-width: 1424.8px;
             overflow: hidden;
-            max-width: 100%;
             background-color: #000;
         }
 
-        .video-container iframe {
+        .video-container video {
             position: absolute;
             top: 0;
             left: 0;
@@ -37,18 +38,25 @@
             padding: 10px;
         }
     </style>
-
 </head>
 <body>
 
-    <h1>Episode 1 - The Vexations of a Shut-In Vampire Princess</h1>
+    <header>
+        <h1>Welcome to My Website</h1>
+    </header>
 
-    <div class="video-container">
-        <iframe width="640" height="360" src="https://www.youtube.com/embed/Xb3MMxt_WSc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
+    <main>
+        <h2>My Video from Dropbox</h2>
+        <div class="video-container">
+            <video controls>
+                <source src="https://www.dropbox.com/scl/fi/d3px88x8eo9fgwp0selk9/EP.1.v0.1713222741.1080p.mp4?raw=1" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </main>
 
     <footer>
-        <p>Kurumi Studios &copy; 2024</p>
+        <p>Created by Me</p>
     </footer>
 
 </body>
