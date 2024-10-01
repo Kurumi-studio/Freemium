@@ -13,9 +13,21 @@
             padding: 20px;
         }
 
-        video {
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background-color: #000;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
-            height: auto;
+            height: 100%;
         }
 
         footer {
@@ -31,11 +43,9 @@
 
     <h1>Episode 1 - The Vexations of a Shut-In Vampire Princess</h1>
 
-    <video width="640" height="360" controls>
-  <source src="https://www.dropbox.com/scl/fi/d3px88x8eo9fgwp0selk9/EP.1.v0.1713222741.1080p.mp4?rlkey=uhxfr4zf4lca744vdgz85x13e&st=onc5egsk&raw=1" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-
+    <div class="video-container">
+        <iframe src="https://player.vimeo.com/video/1014625165" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+    </div>
 
     <footer>
         <p>Kurumi Studios &copy; 2024</p>
