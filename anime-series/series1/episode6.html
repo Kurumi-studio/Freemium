@@ -3,26 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Episode 6</title>
-    <link rel="stylesheet" href="../styles.css">
+    <title>Anime Series - The Vexations of a Shut-In Vampire Princess - Episode 6</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <style>
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background-color: #000;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        .nav-buttons {
+            margin: 20px 0;
+            text-align: center;
+        }
+        .nav-buttons a {
+            display: inline-block;
+            margin: 0 10px;
+            padding: 10px 15px;
+            background-color: #007BFF;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .nav-buttons a:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
 
     <header>
-        <h1>Episode 6</h1>
+        <h1>The Vexations of a Shut-In Vampire Princess</h1>
     </header>
 
-    <nav>
-        <a href="episode5.html"><button>Previous</button></a>
-        <a href="episode7.html"><button>Next</button></a>
-    </nav>
-
     <main>
-        <video controls style="width: 100%; max-width: 800px;">
-            <source src="https://drive.google.com/uc?export=download&id=1ar9uu9sgfXDz5Z3QjhqRfFmYC0RfJULk" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+        <div class="nav-buttons" id="nav-buttons"></div>
+        <h2>Episode 6</h2>
+        <div class="video-container">
+            <iframe src="https://drive.google.com/file/d/1hDUfaAvy0V1lSNEcnJRxGgb_DyafFIuY/preview" allow="autoplay" allowfullscreen></iframe>
+        </div>
     </main>
+
+    <footer>
+        <p>Created by Me</p>
+    </footer>
+
+    <script>
+        const episodes = [
+            { title: "Episode 1", url: "episode1.html" },
+            { title: "Episode 2", url: "episode2.html" },
+            { title: "Episode 3", url: "episode3.html" },
+            { title: "Episode 4", url: "episode4.html" },
+            { title: "Episode 5", url: "episode5.html" },
+            { title: "Episode 6", url: "episode6.html" },
+            { title: "Episode 7", url: "episode7.html" },
+            { title: "Episode 8", url: "episode8.html" },
+            { title: "Episode 9", url: "episode9.html" },
+            { title: "Episode 10", url: "episode10.html" },
+            { title: "Episode 11", url: "episode11.html" },
+            { title: "Episode 12", url: "episode12.html" }
+        ];
+        const currentIndex = 5;
+        const navButtons = document.getElementById("nav-buttons");
+
+        if (currentIndex > 0) {
+            const prevButton = document.createElement("a");
+            prevButton.href = episodes[currentIndex - 1].url;
+            prevButton.textContent = "Previous";
+            navButtons.appendChild(prevButton);
+        }
+
+        if (currentIndex < episodes.length - 1) {
+            const nextButton = document.createElement("a");
+            nextButton.href = episodes[currentIndex + 1].url;
+            nextButton.textContent = "Next";
+            navButtons.appendChild(nextButton);
+        }
+    </script>
 
 </body>
 </html>
