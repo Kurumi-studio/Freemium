@@ -24,6 +24,26 @@
             height: 100%;
             border: 0;
         }
+
+        /* Styling for navigation buttons */
+        .nav-buttons {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .nav-buttons a {
+            display: inline-block;
+            margin: 0 10px;
+            padding: 10px 15px;
+            background-color: #007BFF;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .nav-buttons a:hover {
+            background-color: #0056b3;
+        }
     </style>
 </head>
 <body>
@@ -33,6 +53,10 @@
     </header>
 
     <main>
+        <div class="nav-buttons" id="nav-buttons">
+            <!-- Previous and Next buttons will be inserted here -->
+        </div>
+
         <h2>Episode 1</h2>
         <div class="video-container">
             <iframe src="https://drive.google.com/file/d/10BHIE4XP4buoGphnnw20-tj9RjplqFV9/preview"
@@ -43,6 +67,37 @@
     <footer>
         <p>Created by Me</p>
     </footer>
+
+    <script>
+        // Episode links
+        const episodes = [
+            { title: "Episode 1", url: "episode1.html" }, // current episode
+            { title: "Episode 2", url: "episode2.html" }, // next episode
+            { title: "Episode 3", url: "episode3.html" }, // next episode
+            // Add more episodes as needed
+        ];
+
+        // Get current episode index
+        const currentIndex = 0; // Change this value based on the current episode (0 for Episode 1)
+
+        const navButtons = document.getElementById("nav-buttons");
+
+        // Previous Button
+        if (currentIndex > 0) {
+            const prevButton = document.createElement("a");
+            prevButton.href = episodes[currentIndex - 1].url;
+            prevButton.textContent = "Previous";
+            navButtons.appendChild(prevButton);
+        }
+
+        // Next Button
+        if (currentIndex < episodes.length - 1) {
+            const nextButton = document.createElement("a");
+            nextButton.href = episodes[currentIndex + 1].url;
+            nextButton.textContent = "Next";
+            navButtons.appendChild(nextButton);
+        }
+    </script>
 
 </body>
 </html>
