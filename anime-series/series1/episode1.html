@@ -4,16 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anime Series - The Vexations of a Shut-In Vampire Princess - Episode 1</title>
-    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="../../styles.css"> <!-- Relative path to styles.css -->
     <style>
+        /* Add responsive styling for the iframe container */
         .video-container {
             position: relative;
-            padding-bottom: 56.25%;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
             height: 0;
             overflow: hidden;
             max-width: 100%;
             background-color: #000;
         }
+
         .video-container iframe {
             position: absolute;
             top: 0;
@@ -22,10 +24,13 @@
             height: 100%;
             border: 0;
         }
+
+        /* Styling for navigation buttons */
         .nav-buttons {
             margin: 20px 0;
             text-align: center;
         }
+
         .nav-buttons a {
             display: inline-block;
             margin: 0 10px;
@@ -35,6 +40,7 @@
             text-decoration: none;
             border-radius: 5px;
         }
+
         .nav-buttons a:hover {
             background-color: #0056b3;
         }
@@ -47,10 +53,14 @@
     </header>
 
     <main>
-        <div class="nav-buttons" id="nav-buttons"></div>
+        <div class="nav-buttons" id="nav-buttons">
+            <!-- Previous and Next buttons will be inserted here -->
+        </div>
+
         <h2>Episode 1</h2>
         <div class="video-container">
-            <iframe src="https://drive.google.com/file/d/10BHIE4XP4buoGphnnw20-tj9RjplqFV9/preview" allow="autoplay" allowfullscreen></iframe>
+            <iframe src="https://drive.google.com/file/d/10BHIE4XP4buoGphnnw20-tj9RjplqFV9/preview"
+                    allow="autoplay" allowfullscreen></iframe>
         </div>
     </main>
 
@@ -59,23 +69,20 @@
     </footer>
 
     <script>
+        // Episode links
         const episodes = [
-            { title: "Episode 1", url: "episode1.html" },
-            { title: "Episode 2", url: "episode2.html" },
-            { title: "Episode 3", url: "episode3.html" },
-            { title: "Episode 4", url: "episode4.html" },
-            { title: "Episode 5", url: "episode5.html" },
-            { title: "Episode 6", url: "episode6.html" },
-            { title: "Episode 7", url: "episode7.html" },
-            { title: "Episode 8", url: "episode8.html" },
-            { title: "Episode 9", url: "episode9.html" },
-            { title: "Episode 10", url: "episode10.html" },
-            { title: "Episode 11", url: "episode11.html" },
-            { title: "Episode 12", url: "episode12.html" }
+            { title: "Episode 1", url: "episode1.html" }, // current episode
+            { title: "Episode 2", url: "episode2.html" }, // next episode
+            { title: "Episode 3", url: "episode3.html" }, // next episode
+            // Add more episodes as needed
         ];
-        const currentIndex = 0; 
+
+        // Get current episode index
+        const currentIndex = 0; // Change this value based on the current episode (0 for Episode 1)
+
         const navButtons = document.getElementById("nav-buttons");
 
+        // Previous Button
         if (currentIndex > 0) {
             const prevButton = document.createElement("a");
             prevButton.href = episodes[currentIndex - 1].url;
@@ -83,6 +90,7 @@
             navButtons.appendChild(prevButton);
         }
 
+        // Next Button
         if (currentIndex < episodes.length - 1) {
             const nextButton = document.createElement("a");
             nextButton.href = episodes[currentIndex + 1].url;
