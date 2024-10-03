@@ -25,12 +25,14 @@
 
         header {
             width: 100%;
+            overflow: hidden; /* Hide the overflow of the header */
+            height: 200px; /* Set the desired height for the header */
         }
 
         .header-img {
             width: 100%;
             height: auto; /* Maintain aspect ratio */
-            max-height: 200px; /* Limit the height to 200px */
+            transform: translateY(-50%); /* Move the image up to cut it in half */
         }
 
         .top-nav {
