@@ -50,7 +50,46 @@
         <div class="nav-buttons" id="nav-buttons"></div>
         <h2>Episode 3</h2>
         <div class="video-container">
-            <iframe src="https://drive.google.com/file/d/14TkaDo0O6sXU9MQJfYg77kK5TjJRhR1x/preview" allow="autoplay" allowfullscreen></iframe>
+            <iframe src="https://drive.google.com/file/d/1yGbcWJXsGItKtWbpWwAW92LXsA5WoM3I/preview" allow="autoplay" allowfullscreen></iframe>
         </div>
     </main>
 
+    <footer>
+        <p>Created by Me</p>
+    </footer>
+
+    <script>
+        const episodes = [
+            { title: "Episode 1", url: "episode1.html" },
+            { title: "Episode 2", url: "episode2.html" },
+            { title: "Episode 3", url: "episode3.html" },
+            { title: "Episode 4", url: "episode4.html" },
+            { title: "Episode 5", url: "episode5.html" },
+            { title: "Episode 6", url: "episode6.html" },
+            { title: "Episode 7", url: "episode7.html" },
+            { title: "Episode 8", url: "episode8.html" },
+            { title: "Episode 9", url: "episode9.html" },
+            { title: "Episode 10", url: "episode10.html" },
+            { title: "Episode 11", url: "episode11.html" },
+            { title: "Episode 12", url: "episode12.html" }
+        ];
+        const currentIndex = 2;
+        const navButtons = document.getElementById("nav-buttons");
+
+        if (currentIndex > 0) {
+            const prevButton = document.createElement("a");
+            prevButton.href = episodes[currentIndex - 1].url;
+            prevButton.textContent = "Previous";
+            navButtons.appendChild(prevButton);
+        }
+
+        if (currentIndex < episodes.length - 1) {
+            const nextButton = document.createElement("a");
+            nextButton.href = episodes[currentIndex + 1].url;
+            nextButton.textContent = "Next";
+            navButtons.appendChild(nextButton);
+        }
+    </script>
+
+</body>
+</html>
