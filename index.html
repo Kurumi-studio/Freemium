@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kurumi Studios - Anime Series</title>
 
-    <!-- Inline CSS for styling the page -->
     <style>
         /* General reset */
         * {
@@ -25,10 +24,11 @@
 
         header {
             width: 100%;
-            height: 200px; /* Set the desired height for the header */
-            background-image: url('https://github.com/Kurumi-studio/Freemium/raw/main/1260748.png');
-            background-size: cover; /* Cover the entire header */
-            background-position: top; /* Align to the top of the image */
+        }
+
+        .header-img {
+            width: 100%;
+            height: auto;
         }
 
         .top-nav {
@@ -93,38 +93,34 @@
         }
     </style>
 
-    <!-- Inline JavaScript for random episode functionality -->
     <script>
         function goToRandomEpisode() {
-            // List of all episode URLs for different series
             const episodes = [
                 'anime-series/series1/episode1.html',
                 'anime-series/series1/episode2.html',
                 'anime-series/series2/episode1.html',
                 'anime-series/series2/episode2.html'
             ];
-            // Select a random episode from the list
             const randomEpisode = episodes[Math.floor(Math.random() * episodes.length)];
-            // Redirect the user to the random episode
             window.location.href = randomEpisode;
         }
     </script>
 </head>
 <body>
 
-    <header></header>
+    <header>
+        <img src="https://github.com/Kurumi-studio/Freemium/blob/main/1260748.png" alt="Header Image" class="header-img">
+    </header>
 
     <nav class="top-nav">
-        <!-- The Random button that calls the goToRandomEpisode() function when clicked -->
         <button class="random-btn" onclick="goToRandomEpisode()">Random</button>
     </nav>
 
     <div class="container">
-        <!-- Left Section: Series -->
         <section class="series-list">
             <article class="series">
                 <a href="anime-series/series1/index.html">
-                    <img src="https://via.placeholder.com/300x150" alt="Series 1">
+                    <img src="https://github.com/Kurumi-studio/Freemium/blob/main/809a74e72bb24c9db594eeaf3f032615d34113ad062f3daba482486cc0a5fd8c%20(1).jpg" alt="Series 1">
                     <div class="series-info">
                         <h2>Series 1</h2>
                         <p>Magic, Adventure, Comedy</p>
