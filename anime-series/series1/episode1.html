@@ -5,6 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anime Series - The Vexations of a Shut-In Vampire Princess - Episode 1</title>
     <link rel="stylesheet" href="../../styles.css"> <!-- Relative path to styles.css -->
+    <style>
+        /* Add responsive styling for the iframe container */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background-color: #000;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+    </style>
 </head>
 <body>
 
@@ -15,10 +35,8 @@
     <main>
         <h2>Episode 1</h2>
         <div class="video-container">
-            <video width="1424.8" height="801.45" controls>
-                <source src="https://www.dropbox.com/s/d3px88x8eo9fgwp0selk9/EP.1.v0.1713222741.1080p.mp4?raw=1" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+            <iframe src="https://drive.google.com/file/d/10BHIE4XP4buoGphnnw20-tj9RjplqFV9/preview"
+                    allow="autoplay" allowfullscreen></iframe>
         </div>
     </main>
 
